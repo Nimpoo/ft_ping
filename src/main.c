@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 01:33:13 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/07/24 15:57:06 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/07/24 15:57:59 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	lezgo(t_ping *ping)
 		}
 		ping->ip_header = (struct ip *)buffer;
 		ping->ip_header_length = ping->ip_header->ip_hl * 4;
-		ping->icmp_header = (struct icmphdr *)(buffer + ping->ip_header_length);
+		ping->icmp_header = (struct icmp *)(buffer + ping->ip_header_length);
 		if (ping->ip_header->ip_p == IPPROTO_ICMP)
 		{
-			if (ping->icmp_header->type == ICMP_ECHO)
+			if (ping->icmp_header->icmp_type == ICMP_ECHO)
 			{
 				printf("PROUTE");
 			}

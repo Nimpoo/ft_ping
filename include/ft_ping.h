@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:45:45 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/07/24 01:42:29 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/07/24 15:49:54 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_ping {
 	struct ip			*ip_header;
 	int					ip_header_length;
 	int					data_size;
-	struct icmphdr		*icmp_header;
+	struct icmp			*icmp_header;
 }t_ping;
 
 #endif
