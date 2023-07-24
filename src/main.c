@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 01:33:13 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/07/24 01:40:30 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/07/24 15:57:06 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	setup(t_ping *ping)
 	ping->sockfd = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP);
 	if (ping->sockfd < 0)
 	{
-		write(2, "[ERROR]: Fail to create a socket\n", 32);
+		write(2, "[ERROR]: Fail to create a socket\n", 33);
 		exit(EXIT_FAILURE);
 	}
 	ping->sender_addr_len = sizeof(ping->sender_addr);
