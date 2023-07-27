@@ -3,7 +3,7 @@ CFLAGS:=-Werror -Wall -Wextra
 
 NAME:=ft_ping
 
-SRC:=$(addprefix src/, main.c)
+SRC:=$(addprefix src/, main.c, utils.c, request.c)
 OBJ:=$(SRC:.c=.o)
 
 all: $(NAME)
