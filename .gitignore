@@ -1,0 +1,5 @@
+ft_ping
+*.o
+.vscode
+a.out
+_*_*
