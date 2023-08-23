@@ -6,7 +6,7 @@
 /*   By: sihemayoub <sihemayoub@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:45:45 by sihemayoub        #+#    #+#             */
-/*   Updated: 2023/07/26 03:43:21 by sihemayoub       ###   ########.fr       */
+/*   Updated: 2023/07/27 22:39:02 by sihemayoub       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct s_ping {
 	unsigned char		packet[IP_MAXPACKET];
 }t_ping;
 
-void    request(t_ping *ping);
+void			request(t_ping *ping);
+unsigned short	calcul_checksum(void *icmp_header, int len);
 
 #endif
